@@ -44,4 +44,21 @@ The program cycles through four LEDs. A player must press the button correspondi
 
 ## State Machine
 
-The system rotates through the following states:
+The system rotates through the following states: S1 → S2 → S3 → S4 → repeat
+
+
+If a button is pressed during a state:
+
+- Correct guess → **SOK (WIN)**
+- Incorrect guess → **SERR (ERROR)**
+
+After either WIN or ERROR, the system waits for a new button press and restarts at **S1**.
+
+---
+
+## File Structure
+guess_game.asm Main assembly implementation
+
+## Author
+
+Pavel Hardey
